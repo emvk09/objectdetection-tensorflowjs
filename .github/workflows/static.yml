@@ -46,7 +46,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Grant camera permissions
-        uses: gr2m/get-user-media-polyfill-action@v1
+        run: |
+          sed -i 's/navigator\.mediaDevices\.getUserMedia(\{video:true\}\);/navigator.mediaDevices.getUserMedia(\{video:\{facingMode:"environment"\}\});/' node_modules/react-webcam/dist/react-webcam.esm.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
