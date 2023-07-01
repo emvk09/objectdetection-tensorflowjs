@@ -4,10 +4,11 @@ export const drawRectangle = (resultObjs, canvas) => {
     const [x, y, width, height] = result.bbox; // here we are destructuring an array
     const { class: detectedClassText } = result; // here we are destructuring an object. class is a reserved word. So we assign another name to it
 
+    const color = "red";
     // Math.random() generates a random decimal number between 0 and 1
     // Thus we get a random decimal number between 0 and 16777215 after multiplication
     // Math.floor() rounds down the resulting decimal number
-    const color = "#" + Math.floor(Math.random() * 16777215).toString();
+    // const color = "#" + Math.floor(Math.random() * 16777215).toString();
     // strokeStyle represents stroke (border) color for the rectangle
     canvas.strokeStyle = color;
     canvas.font = "18px Arial";

@@ -49,7 +49,6 @@ const App = () => {
 
       // The video feed is passed to the model. The predicted results are returned to resultObjs. It is an array of objects
       const resultObjs = await loadedCocoModel.detect(video);
-      console.log(resultObjs);
 
       // 2D rendering context (the area to be drawn) of the canvas element is taken
       const canvas = canvasRef.current.getContext("2d");
@@ -61,6 +60,16 @@ const App = () => {
 
   return (
     <div className="App">
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: "2",
+        }}
+      />
       <Webcam
         ref={webcamRef}
         muted={true} // this mutes the audio feed
@@ -70,17 +79,6 @@ const App = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           zIndex: "1",
-        }}
-      />
-
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          zIndex: "10",
         }}
       />
     </div>
