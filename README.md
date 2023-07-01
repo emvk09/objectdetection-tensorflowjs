@@ -5,6 +5,8 @@
     </a>
 </p>
 
+✨ Live demo : [https://objectdetection-tensorflowjs.netlify.app ](https://objectdetection-tensorflowjs.netlify.app/)
+
 ## Introduction
 
 This educational project showcases a real-time object detection application built with [TensorFlow.js](https://www.tensorflow.org/js/models) and the [CocoSSD_model](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd). By leveraging the power of machine learning, the project enables you to detect objects in real-time using your webcam. The user interface is developed using [React](https://react.dev/), and the build tool used is [Vite](https://vitejs.dev/). This repository contains the source code for the project.
